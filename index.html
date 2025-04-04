@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            margin-top: 150px;
+            margin-left: 500px;
+        }
+        img {
+            height: 250px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="img/bulb_off (1).png" id="flag-img" alt="bulb image">
+    <button onclick=" onoff(true)">on</button>
+    <button onclick="onoff(false)">off</button>
+    <script>
+        function onoff(flag) {
+            if (flag) {
+                document.body.style.backgroundImage  = 'yellow';
+                document.getElementById("flag-img").setAttribute("src", "img/bulb_on.png");
+            } else {
+                document.body.style.backgroundColor = 'black';
+                document.getElementById("flag-img").setAttribute("src", "img/bulb_off (1).png");
+            }
+        }
+    </script>
+</body>
+</html>
